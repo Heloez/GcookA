@@ -2,8 +2,8 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GcookA.Models;
-[Table("ReceitaIgrediente")]
-    public class ReceitaIgrediente
+[Table("ReceitaIngrediente")]
+    public class ReceitaIngrediente
     {
       [Key, Column(Order =1)]
       public int ReceitaId { get; set; }
@@ -11,8 +11,8 @@ namespace GcookA.Models;
 
       public Receita Receita { get; set; }  
       [Key,Column(Order =2)]
-      public int IgredientesId { get; set; }
-      [ForeignKey("IgredienteId")]
+      public int IngredienteId { get; set; }
+      [ForeignKey("IngredienteId")]
       public Ingrediente Ingrediente { get; set;}
 
       [Required]

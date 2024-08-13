@@ -12,4 +12,6 @@ namespace GcookA.Models;
         [Required]
         [StringLength(50)]
         public string Nome { get; set;}
+
+        public ICollection<ReceitaIngrediente> Receitas { get; set; }
     }

@@ -35,6 +35,6 @@ namespace GcookA.Models;
         [ForeignKey("CategoriaId")]
         public Categoria Categoria { get; set; }
 
-        public ICollection<ReceitaIgrediente> Igredientes { get; set; }
+        public ICollection<ReceitaIngrediente> Ingredientes { get; set; }
 
     }
