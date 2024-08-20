@@ -30,6 +30,9 @@ namespace GcookA.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<bool>("ExibirHome")
+                        .HasColumnType("tinyint(1)");
+
                     b.Property<string>("Foto")
                         .HasMaxLength(300)
                         .HasColumnType("varchar(300)");
@@ -42,6 +45,78 @@ namespace GcookA.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categoria");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            ExibirHome = true,
+                            Foto = "/img/categorias/1.jpg",
+                            Nome = "Acompanhamentos"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            ExibirHome = false,
+                            Foto = "/img/categorias/2.jpg",
+                            Nome = "Bebidas"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            ExibirHome = true,
+                            Foto = "/img/categorias/3.jpg",
+                            Nome = "Bolos"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            ExibirHome = true,
+                            Foto = "/img/categorias/4.jpg",
+                            Nome = "Carnes"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            ExibirHome = true,
+                            Foto = "/img/categorias/5.jpg",
+                            Nome = "Frango"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            ExibirHome = false,
+                            Foto = "/img/categorias/6.jpg",
+                            Nome = "Lanches"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            ExibirHome = false,
+                            Foto = "/img/categorias/7.jpg",
+                            Nome = "Massas"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            ExibirHome = false,
+                            Foto = "/img/categorias/8.jpg",
+                            Nome = "Molhos"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            ExibirHome = true,
+                            Foto = "/img/categorias/9.jpg",
+                            Nome = "Pratos Principais"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            ExibirHome = false,
+                            Foto = "/img/categorias/10.jpg",
+                            Nome = "Peixes"
+                        });
                 });
 
             modelBuilder.Entity("GcookA.Models.Comentario", b =>
@@ -94,6 +169,73 @@ namespace GcookA.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Ingrediente");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Nome = "Carne Moída"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Nome = "Pimentão Verde"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Nome = "Pimentão Vermelho"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Nome = "Pimentão Amarelo"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Nome = "Cebola"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Nome = "Curry"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Nome = "Pimenta Calabresa"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Nome = "Páprica Picante"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Nome = "Sal"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Nome = "Orégano"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            Nome = "Pão Sirio"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            Nome = "Cream Cheese"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            Nome = "Cheddar"
+                        });
                 });
 
             modelBuilder.Entity("GcookA.Models.Receita", b =>
@@ -140,6 +282,20 @@ namespace GcookA.Migrations
                     b.HasIndex("CategoriaId");
 
                     b.ToTable("Receita");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CategoriaId = 4,
+                            Descricao = "Prato perfeito para um lanche rápido ou mesmo uma refeição picante. Carne moída, pimentões, temperos e muito queijooooo",
+                            Dificuldade = 1,
+                            Foto = "/img/receitas/1.jpg",
+                            Nome = "Carne Moída Mexicana",
+                            Preparo = "",
+                            Rendimento = 3,
+                            TempoPreparo = "20 minutos"
+                        });
                 });
 
             modelBuilder.Entity("GcookA.Models.ReceitaIngrediente", b =>
@@ -166,6 +322,80 @@ namespace GcookA.Migrations
                     b.HasIndex("IngredienteId");
 
                     b.ToTable("ReceitaIngrediente");
+
+                    b.HasData(
+                        new
+                        {
+                            ReceitaId = 1,
+                            IngredienteId = 1,
+                            Quantidade = "500g"
+                        },
+                        new
+                        {
+                            ReceitaId = 1,
+                            IngredienteId = 3,
+                            Quantidade = "1 pequeno"
+                        },
+                        new
+                        {
+                            ReceitaId = 1,
+                            IngredienteId = 4,
+                            Quantidade = "1 pequeno"
+                        },
+                        new
+                        {
+                            ReceitaId = 1,
+                            IngredienteId = 5,
+                            Quantidade = "1 pequeno"
+                        },
+                        new
+                        {
+                            ReceitaId = 1,
+                            IngredienteId = 6,
+                            Quantidade = "1 colher sopa"
+                        },
+                        new
+                        {
+                            ReceitaId = 1,
+                            IngredienteId = 7,
+                            Quantidade = "1 colher sopa"
+                        },
+                        new
+                        {
+                            ReceitaId = 1,
+                            IngredienteId = 8,
+                            Quantidade = "1 colher sopa"
+                        },
+                        new
+                        {
+                            ReceitaId = 1,
+                            IngredienteId = 9,
+                            Quantidade = "1 colher sopa"
+                        },
+                        new
+                        {
+                            ReceitaId = 1,
+                            IngredienteId = 10,
+                            Quantidade = "1 colher sopa"
+                        },
+                        new
+                        {
+                            ReceitaId = 1,
+                            IngredienteId = 11,
+                            Quantidade = "A vontade"
+                        },
+                        new
+                        {
+                            ReceitaId = 1,
+                            IngredienteId = 12,
+                            Quantidade = "200g"
+                        },
+                        new
+                        {
+                            ReceitaId = 1,
+                            IngredienteId = 13,
+                            Quantidade = "200g"
+                        });
                 });
 
             modelBuilder.Entity("GcookA.Models.Usuario", b =>
@@ -192,10 +422,10 @@ namespace GcookA.Migrations
                     b.HasData(
                         new
                         {
-                            UsuarioId = "7e6fa47e-c8e4-47c4-9586-908dd3ad01f8",
-                            DataNascimento = new DateTime(1981, 8, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UsuarioId = "ddf093a6-6cb5-4ff7-9a64-83da34aee005",
+                            DataNascimento = new DateTime(2006, 9, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Foto = "/img/usuarios/avatar.png",
-                            Nome = "José Antonio Gallo Junior"
+                            Nome = "Heloísa Ezeugo"
                         });
                 });
 
@@ -227,15 +457,21 @@ namespace GcookA.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "8defcaad-4c90-4455-a7a0-00d3a3eb086e",
+                            Id = "0b44ca04-f6b0-4a8f-a953-1f2330d30894",
                             Name = "Administrador",
                             NormalizedName = "ADMINISTRADOR"
                         },
                         new
                         {
-                            Id = "ebb2cd3d-a0fc-4cfe-815a-66591998514c",
+                            Id = "bec71b05-8f3d-4849-88bb-0e8d518d2de8",
                             Name = "Usuário",
                             NormalizedName = "USUÁRIO"
+                        },
+                        new
+                        {
+                            Id = "ddf093a6-6cb5-4ff7-9a64-83da34aee005",
+                            Name = "Moderador",
+                            NormalizedName = "MODERADOR"
                         });
                 });
 
@@ -330,17 +566,17 @@ namespace GcookA.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "7e6fa47e-c8e4-47c4-9586-908dd3ad01f8",
+                            Id = "ddf093a6-6cb5-4ff7-9a64-83da34aee005",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "7740ecd6-c854-4188-88a3-39009a7d8fbe",
+                            ConcurrencyStamp = "a6d39152-c395-4ddb-ba97-4c873b21be01",
                             Email = "admin@gcook.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@GCOOK.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAIAAYagAAAAELEb2s2Oikj9D8+copFj76XowjrhvPEbTdiD56rFZaALnx4Nu1u6Z7qGzABpX0Mkug==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEOpMVnKuXNcaNLtH/aoeeC0mI9GSIM5YsCxDqtWkSGz4Z28N3+Rdt7YFdgLBth6uiw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "44520958-45bf-4571-87af-7c835b10c95f",
+                            SecurityStamp = "7fcd8762-5cae-45fd-b8d0-0a1ce443d560",
                             TwoFactorEnabled = false,
                             UserName = "Admin"
                         });
@@ -410,13 +646,18 @@ namespace GcookA.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "7e6fa47e-c8e4-47c4-9586-908dd3ad01f8",
-                            RoleId = "8defcaad-4c90-4455-a7a0-00d3a3eb086e"
+                            UserId = "ddf093a6-6cb5-4ff7-9a64-83da34aee005",
+                            RoleId = "0b44ca04-f6b0-4a8f-a953-1f2330d30894"
                         },
                         new
                         {
-                            UserId = "7e6fa47e-c8e4-47c4-9586-908dd3ad01f8",
-                            RoleId = "ebb2cd3d-a0fc-4cfe-815a-66591998514c"
+                            UserId = "ddf093a6-6cb5-4ff7-9a64-83da34aee005",
+                            RoleId = "bec71b05-8f3d-4849-88bb-0e8d518d2de8"
+                        },
+                        new
+                        {
+                            UserId = "ddf093a6-6cb5-4ff7-9a64-83da34aee005",
+                            RoleId = "ddf093a6-6cb5-4ff7-9a64-83da34aee005"
                         });
                 });
 
