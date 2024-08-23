@@ -361,7 +361,7 @@ namespace GcookA.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "ddf093a6-6cb5-4ff7-9a64-83da34aee005", 0, "a6d39152-c395-4ddb-ba97-4c873b21be01", "admin@gcook.com", true, false, null, "ADMIN@GCOOK.COM", "ADMIN", "AQAAAAIAAYagAAAAEOpMVnKuXNcaNLtH/aoeeC0mI9GSIM5YsCxDqtWkSGz4Z28N3+Rdt7YFdgLBth6uiw==", null, false, "7fcd8762-5cae-45fd-b8d0-0a1ce443d560", false, "Admin" });
+                values: new object[] { "ddf093a6-6cb5-4ff7-9a64-83da34aee005", 0, "2e0ef7e7-83a7-41f2-a217-d3bb80e8815e", "admin@gcook.com", true, false, null, "ADMIN@GCOOK.COM", "ADMIN", "AQAAAAIAAYagAAAAEAJUw5hkr3RtVz7llKuwB1emJg4jUP3zcDtDDm2BEOqT11IW7o1P2b8Wxn02VnscVg==", null, false, "69a7fba1-b802-4476-9f0e-2ed1a23ac8db", false, "Admin" });
 
             migrationBuilder.InsertData(
                 table: "Categoria",
@@ -397,7 +397,8 @@ namespace GcookA.Migrations
                     { 10, "Orégano" },
                     { 11, "Pão Sirio" },
                     { 12, "Cream Cheese" },
-                    { 13, "Cheddar" }
+                    { 13, "Cheddar" },
+                    { 14, "Azeite" }
                 });
 
             migrationBuilder.InsertData(
@@ -413,12 +414,12 @@ namespace GcookA.Migrations
             migrationBuilder.InsertData(
                 table: "Receita",
                 columns: new[] { "Id", "CategoriaId", "Descricao", "Dificuldade", "Foto", "Nome", "Preparo", "Rendimento", "TempoPreparo" },
-                values: new object[] { 1, 4, "Prato perfeito para um lanche rápido ou mesmo uma refeição picante. Carne moída, pimentões, temperos e muito queijooooo", 1, "/img/receitas/1.jpg", "Carne Moída Mexicana", "", 3, "20 minutos" });
+                values: new object[] { 1, 4, "Prato perfeito para um lanche rápido ou mesmo uma refeição picante. Carne moída, pimentões, temperos e muito queijooooo", 1, "/img/receitas/1.jpg", "Carne Moída Mexicana", "Comece pela preparação dos ingredientes, pique os pimentões e a cebola em pequenos cubos, se preferir você também pode usar um processador de alimentos.Coloque a carne moída para fritar em uma panela com um pouco de azeite.Quando a carne moída já não estiver mais crua, adicione os pimentões e a cebola, mexendo bem para misturar todos os ingredientes.Aguarde alguns instante e adicione os temperos, mexendo novamente para misturar.Frite por mais alguns minutos a carne com os demais ingredientes.Adicione o Cream Cheese e o Queijo Cheddar, mexendo bem para evitar que queime o fundo e ajudar os queijos a derreterem.Quando os queijos já estiverem bem derretidos e misturados com os demais ingredientes, sirva acompanhado do Pão Sirio ou de Doritos.", 3, "20 minutos" });
 
             migrationBuilder.InsertData(
                 table: "Usuario",
                 columns: new[] { "UsuarioId", "DataNascimento", "Foto", "Nome" },
-                values: new object[] { "ddf093a6-6cb5-4ff7-9a64-83da34aee005", new DateTime(2006, 9, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), "/img/usuarios/avatar.png", "Heloísa Ezeugo" });
+                values: new object[] { "ddf093a6-6cb5-4ff7-9a64-83da34aee005", new DateTime(2006, 12, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), "/img/usuarios/avatar.png", "Priscila" });
 
             migrationBuilder.InsertData(
                 table: "ReceitaIngrediente",
@@ -436,7 +437,8 @@ namespace GcookA.Migrations
                     { 10, 1, null, "1 colher sopa" },
                     { 11, 1, null, "A vontade" },
                     { 12, 1, null, "200g" },
-                    { 13, 1, null, "200g" }
+                    { 13, 1, null, "200g" },
+                    { 14, 1, null, "Um pouco" }
                 });
 
             migrationBuilder.CreateIndex(

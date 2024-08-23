@@ -235,6 +235,11 @@ namespace GcookA.Migrations
                         {
                             Id = 13,
                             Nome = "Cheddar"
+                        },
+                        new
+                        {
+                            Id = 14,
+                            Nome = "Azeite"
                         });
                 });
 
@@ -292,7 +297,7 @@ namespace GcookA.Migrations
                             Dificuldade = 1,
                             Foto = "/img/receitas/1.jpg",
                             Nome = "Carne Moída Mexicana",
-                            Preparo = "",
+                            Preparo = "Comece pela preparação dos ingredientes, pique os pimentões e a cebola em pequenos cubos, se preferir você também pode usar um processador de alimentos.Coloque a carne moída para fritar em uma panela com um pouco de azeite.Quando a carne moída já não estiver mais crua, adicione os pimentões e a cebola, mexendo bem para misturar todos os ingredientes.Aguarde alguns instante e adicione os temperos, mexendo novamente para misturar.Frite por mais alguns minutos a carne com os demais ingredientes.Adicione o Cream Cheese e o Queijo Cheddar, mexendo bem para evitar que queime o fundo e ajudar os queijos a derreterem.Quando os queijos já estiverem bem derretidos e misturados com os demais ingredientes, sirva acompanhado do Pão Sirio ou de Doritos.",
                             Rendimento = 3,
                             TempoPreparo = "20 minutos"
                         });
@@ -395,6 +400,12 @@ namespace GcookA.Migrations
                             ReceitaId = 1,
                             IngredienteId = 13,
                             Quantidade = "200g"
+                        },
+                        new
+                        {
+                            ReceitaId = 1,
+                            IngredienteId = 14,
+                            Quantidade = "Um pouco"
                         });
                 });
 
@@ -423,9 +434,9 @@ namespace GcookA.Migrations
                         new
                         {
                             UsuarioId = "ddf093a6-6cb5-4ff7-9a64-83da34aee005",
-                            DataNascimento = new DateTime(2006, 9, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DataNascimento = new DateTime(2006, 12, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Foto = "/img/usuarios/avatar.png",
-                            Nome = "Heloísa Ezeugo"
+                            Nome = "Priscila"
                         });
                 });
 
@@ -568,15 +579,15 @@ namespace GcookA.Migrations
                         {
                             Id = "ddf093a6-6cb5-4ff7-9a64-83da34aee005",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "a6d39152-c395-4ddb-ba97-4c873b21be01",
+                            ConcurrencyStamp = "2e0ef7e7-83a7-41f2-a217-d3bb80e8815e",
                             Email = "admin@gcook.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@GCOOK.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAIAAYagAAAAEOpMVnKuXNcaNLtH/aoeeC0mI9GSIM5YsCxDqtWkSGz4Z28N3+Rdt7YFdgLBth6uiw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEAJUw5hkr3RtVz7llKuwB1emJg4jUP3zcDtDDm2BEOqT11IW7o1P2b8Wxn02VnscVg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "7fcd8762-5cae-45fd-b8d0-0a1ce443d560",
+                            SecurityStamp = "69a7fba1-b802-4476-9f0e-2ed1a23ac8db",
                             TwoFactorEnabled = false,
                             UserName = "Admin"
                         });
