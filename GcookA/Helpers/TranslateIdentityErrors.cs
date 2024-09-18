@@ -26,7 +26,8 @@ public static class TranslateIdentityErrors
             "PasswordTooShort" => "Senha muito curta.",
             "PasswordRequiresNonAlphanumeric" => "Senhas devem conter ao menos um caracter não alfanumérico.",
             "PasswordRequiresDigit" => "Senhas devem conter ao menos um digito ('0'-'9').",
-            "PasswordRequiresLower" => "Senhas devem conter ao menos um caracter em caixa alta ('A' - 'Z').",
+            "PasswordRequiresLower" => "Senhas devem conter ao menos um caracter em caixa baixa ('a' - 'z').",
+            "PasswordRequiresUpper" => "Senhas devem conter ao menos um caracter em caixa alta ('A' - 'Z').",
             _ => "Ocorreu um erro desconhecido.",
         };
         return message;

@@ -1,12 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using GcookA.ViewModels;
+using Microsoft.AspNetCore.Identity;
 
-namespace GcookA.Services
+namespace GcookA.Services;
+
+public interface IUsuarioService
 {
-    public interface IUsuarioService
-    {
-        
-    }
+     Task<UsuarioVM> GetUsuarioLogado();
+     Task<SignInResult> LoginUsuario(LoginVM login);
+     Task LogoffUsuario();
+     Task<List<string>> RegistrarUsuario(RegistroVM registro);
+     Task<bool> ConfirmarEmail(string userId, string code);   
 }
